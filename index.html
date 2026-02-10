@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TinyWhoop PVC Gate Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>TinyWhoop PVC Gate Calculator</h1>
+      <p class="subtitle">Calculate how much PVC tube you need for your FPV course obstacles</p>
+    </header>
+
+    <section class="form-section">
+      <h2>Gate Size</h2>
+      <div class="input-group">
+        <label for="gate-size">Size per side (inches):</label>
+        <input type="number" id="gate-size" min="1" step="0.5" placeholder="e.g. 12" />
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>Obstacles — How many of each?</h2>
+      <div class="obstacle-grid">
+        <div class="obstacle-card">
+          <label for="qty-0">Ladder 2 steps and Pylon</label>
+          <input type="number" id="qty-0" min="0" value="0" />
+        </div>
+        <div class="obstacle-card">
+          <label for="qty-1">Ladder Full (3 steps)</label>
+          <input type="number" id="qty-1" min="0" value="0" />
+        </div>
+        <div class="obstacle-card">
+          <label for="qty-2">Ladder 2 steps with side gate</label>
+          <input type="number" id="qty-2" min="0" value="0" />
+        </div>
+        <div class="obstacle-card">
+          <label for="qty-3">Floor continuous gates 3</label>
+          <input type="number" id="qty-3" min="0" value="0" />
+        </div>
+        <div class="obstacle-card">
+          <label for="qty-4">Floor continuous gates 2</label>
+          <input type="number" id="qty-4" min="0" value="0" />
+        </div>
+        <div class="obstacle-card">
+          <label for="qty-5">Single Gate</label>
+          <input type="number" id="qty-5" min="0" value="0" />
+        </div>
+        <div class="obstacle-card">
+          <label for="qty-6">Cube</label>
+          <input type="number" id="qty-6" min="0" value="0" />
+        </div>
+        <div class="obstacle-card">
+          <label for="qty-7">Pylon</label>
+          <input type="number" id="qty-7" min="0" value="0" />
+        </div>
+      </div>
+    </section>
+
+    <button id="calculate-btn">Calculate</button>
+
+    <section id="results"></section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #38bdf8;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #7dd3fc;
+  margin-bottom: 0.8rem;
+}
+
+.form-section {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input-group label {
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.input-group input {
+  width: 120px;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.obstacle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.obstacle-card {
+  background-color: #0f172a;
+  border: 2px solid #334155;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 0.2s;
+}
+
+.obstacle-card:hover {
+  border-color: #38bdf8;
+}
+
+.obstacle-card label {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.obstacle-card input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  background-color: #1e293b;
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.obstacle-card input:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+#calculate-btn {
+  display: block;
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  background-color: #38bdf8;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 1.5rem;
+}
+
+#calculate-btn:hover {
+  background-color: #7dd3fc;
+}
+
+#results {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 0;
+  transition: padding 0.3s;
+}
+
+#results:not(:empty) {
+  padding: 1.5rem;
+}
+
+#results h2 {
+  font-size: 1.4rem;
+  color: #38bdf8;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.result-section {
+  margin-bottom: 1.2rem;
+}
+
+.result-section:last-child {
+  margin-bottom: 0;
+}
+
+.result-section h3 {
+  font-size: 1rem;
+  color: #7dd3fc;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.3rem;
+}
+
+.result-section p {
+  font-size: 0.95rem;
+  padding: 0.25rem 0;
+  color: #cbd5e1;
+}
+
+.result-section p strong {
+  color: #e2e8f0;
+}
