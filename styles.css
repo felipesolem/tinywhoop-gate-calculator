@@ -597,6 +597,22 @@ h2 {
   font-weight: 600;
 }
 
+.result-section.disclaimer {
+  background: rgba(255, 46, 151, 0.08);
+  border: 1px solid rgba(255, 46, 151, 0.3);
+  border-left: 3px solid var(--color-pink-magenta);
+}
+
+.result-section.disclaimer h3 {
+  color: var(--color-pink-magenta);
+}
+
+.result-section.disclaimer p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
 /* ============================================
    FOOTER
    ============================================ */
