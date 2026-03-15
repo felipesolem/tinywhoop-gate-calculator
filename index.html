@@ -4,68 +4,153 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TinyWhoop PVC Gate Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
     <header>
+      <div class="logo">🛸</div>
       <h1>TinyWhoop PVC Gate Calculator</h1>
       <p class="subtitle">Calculate how much PVC tube you need for your FPV course obstacles</p>
     </header>
 
-    <section class="form-section">
-      <h2>Gate Size</h2>
-      <p class="note">19x19 inches is the standard size for TinyWhoop gates.</p>
-      <p class="note">
+    <details class="instructions-panel">
+      <summary>
+        <span class="icon">ℹ️</span>
+        <span class="text">How to Use This Calculator</span>
+        <span class="chevron">▼</span>
+      </summary>
+      <div class="instructions-content">
+        <div class="instruction-section">
+          <h3>📋 What This App Does</h3>
+          <p>This calculator helps FPV TinyWhoop pilots determine exactly how much PVC tubing and connectors they need to build obstacle courses.</p>
+        </div>
         
-      </p>
+        <div class="instruction-section">
+          <h3>🎯 How to Use</h3>
+          <ol>
+            <li><strong>Enter Gate Size:</strong> Input the size per side in inches (19" is the standard TinyWhoop gate size)</li>
+            <li><strong>Select Obstacles:</strong> Choose how many of each obstacle type you want to build</li>
+            <li><strong>Calculate:</strong> Click the Calculate button to see your materials list</li>
+            <li><strong>Review Results:</strong> Get the total number of tubes, connectors, and PVC length needed</li>
+          </ol>
+        </div>
+
+        <div class="instruction-section">
+          <h3>📏 Understanding Measurements</h3>
+          <p><strong>Full-size tubes:</strong> Equal to the gate size you enter (e.g., 19")</p>
+          <p><strong>Floor tubes:</strong> Half of the gate size for florr stability (e.g., 9.5" for a 19" gate)</p>
+        </div>
+
+        <div class="instruction-section">
+          <h3>🔧 Connector Types</h3>
+          <ul>
+            <li><strong>T-connectors (3 holes):</strong> Create T-shaped junctions</li>
+            <li><strong>Elbow connectors (2 holes):</strong> 90-degree angle connections</li>
+            <li><strong>5-hole connectors:</strong> Cross/plus shape for complex structures</li>
+            <li><strong>Cube connectors:</strong> Box corners for cube obstacles</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <section class="form-section">
+      <h2>⚙️ Gate Size</h2>
+      <p class="note">💡 19x19 inches is the standard size for TinyWhoop gates</p>
       <div class="input-group">
         <label for="gate-size">Size per side (inches):</label>
-        <input type="number" id="gate-size" min="1" step="0.5" placeholder="e.g. 12" />
+        <input type="number" id="gate-size" min="1" step="0.5" placeholder="e.g. 19" value="19" />
       </div>
     </section>
 
     <section class="form-section">
-      <h2>Obstacles — How many of each?</h2>
+      <h2>🏁 Obstacles — How many of each?</h2>
       <div class="obstacle-grid">
         <div class="obstacle-card">
+          <div class="preview-btn">👁️</div>
+          <div class="preview-tooltip">
+            <img src="img/gif-placeholder.gif" alt="Ladder 2 steps and Pylon preview" />
+          </div>
           <label for="qty-0">Ladder 2 steps and Pylon</label>
           <input type="number" id="qty-0" min="0" value="0" />
         </div>
         <div class="obstacle-card">
+          <div class="preview-btn">👁️</div>
+          <div class="preview-tooltip">
+            <img src="img/gif-placeholder.gif" alt="Ladder Full (3 steps) preview" />
+          </div>
           <label for="qty-1">Ladder Full (3 steps)</label>
           <input type="number" id="qty-1" min="0" value="0" />
         </div>
         <div class="obstacle-card">
+          <div class="preview-btn">👁️</div>
+          <div class="preview-tooltip">
+            <img src="img/gif-placeholder.gif" alt="Ladder 2 steps with side gate preview" />
+          </div>
           <label for="qty-2">Ladder 2 steps with side gate</label>
           <input type="number" id="qty-2" min="0" value="0" />
         </div>
         <div class="obstacle-card">
+          <div class="preview-btn">👁️</div>
+          <div class="preview-tooltip">
+            <img src="img/gif-placeholder.gif" alt="Floor continuous gates 3 preview" />
+          </div>
           <label for="qty-3">Floor continuous gates 3</label>
           <input type="number" id="qty-3" min="0" value="0" />
         </div>
         <div class="obstacle-card">
+          <div class="preview-btn">👁️</div>
+          <div class="preview-tooltip">
+            <img src="img/gif-placeholder.gif" alt="Floor continuous gates 2 preview" />
+          </div>
           <label for="qty-4">Floor continuous gates 2</label>
           <input type="number" id="qty-4" min="0" value="0" />
         </div>
         <div class="obstacle-card">
+          <div class="preview-btn">👁️</div>
+          <div class="preview-tooltip">
+            <img src="img/gif-placeholder.gif" alt="Single Gate preview" />
+          </div>
           <label for="qty-5">Single Gate</label>
           <input type="number" id="qty-5" min="0" value="0" />
         </div>
         <div class="obstacle-card">
+          <div class="preview-btn">👁️</div>
+          <div class="preview-tooltip">
+            <img src="img/gif-placeholder.gif" alt="Cube preview" />
+          </div>
           <label for="qty-6">Cube</label>
           <input type="number" id="qty-6" min="0" value="0" />
         </div>
         <div class="obstacle-card">
+          <div class="preview-btn">👁️</div>
+          <div class="preview-tooltip">
+            <img src="img/gif-placeholder.gif" alt="Pylon preview" />
+          </div>
           <label for="qty-7">Pylon</label>
           <input type="number" id="qty-7" min="0" value="0" />
         </div>
       </div>
     </section>
 
-    <button id="calculate-btn">Calculate</button>
+    <button id="calculate-btn">
+      <span class="btn-text">Calculate Materials</span>
+      <span class="btn-icon">→</span>
+    </button>
 
     <section id="results"></section>
+
+    <footer>
+      <p>Made with ❤️ for the FPV community</p>
+      <p class="footer-links">
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        <span class="separator">•</span>
+        <a href="#" id="reset-link">Reset Calculator</a>
+      </p>
+    </footer>
   </div>
 
   <script src="app.js"></script>

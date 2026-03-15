@@ -123,7 +123,24 @@ const displayResults = () => {
 };
 
 // ============================================
-// 4. EVENT LISTENER — wire up the Calculate button
+// 4. RESET FUNCTIONALITY
+// ============================================
+
+const resetCalculator = () => {
+  document.getElementById("gate-size").value = "19";
+  obstacles.forEach((_, i) => {
+    document.getElementById(`qty-${i}`).value = "0";
+  });
+  document.getElementById("results").innerHTML = "";
+};
+
+// ============================================
+// 5. EVENT LISTENERS
 // ============================================
 
 document.getElementById("calculate-btn").addEventListener("click", displayResults);
+
+document.getElementById("reset-link").addEventListener("click", (e) => {
+  e.preventDefault();
+  resetCalculator();
+});
