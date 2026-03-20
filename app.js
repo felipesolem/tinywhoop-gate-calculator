@@ -122,7 +122,7 @@ const displayResults = () => {
 
     <div class="result-section disclaimer">
       <h3>⚠️ Important Disclaimer</h3>
-      <p>Always buy at least 4 additional feet of tubing if the seller does not sell you the exact lengths. If you buy arbitrary lengths there will always be material that will end up being too short after cutting, so have at least 4 additional feet to correct.</p>
+      <p>Always buy at least 4-8 additional feet of tubing if the seller does not sell you the exact lengths. If you buy arbitrary lengths there will always be material that will end up being too short (not usable) after cutting, so have at least 4-8 additional feet to correct and add.</p>
     </div>
   `;
 };
